@@ -5,5 +5,9 @@ app/home/__pycache__
 app/spoti/__pycache__
 app/yand/__pycache__
 app/yt/__pycache__
+app/spoti/operations/__pycache__
+app/yand/operations/__pycache__
+app/yt/operations/__pycache__
+
 app/db.sqlite3
 dump.rdb
