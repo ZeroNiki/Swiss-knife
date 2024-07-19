@@ -1,3 +1,4 @@
+venv
 app/__pycache__
 app/app/__pycache__
 app/home/__pycache__
