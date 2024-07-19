@@ -1,0 +1,22 @@
+{% extends "app/base.html" %} {% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% block head %} <title>Home</title> {% endblock %}
+</head>
+
+<body>
+  {% block body %}
+
+  <div class="content">
+    <div class="btn">
+      <a class="yt-btn" href="/ytDownloads">YouTube</a>
+        <a class="spoti-btn" href="/spotiDownloads">Spotify</a>
+        <a class="yand-btn" href="/yandDownloads">YandexMusic</a>
+    </div>
+  </div>
+  {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{% extends "app/base.html" %} {% load static %}
+
+<head>
+  {% block head %}
+  <link rel="stylesheet" href="{% static 'app/css/yts.css' %}" />
+  <title>YouTube Downloader</title>
+  {% endblock %}
+</head>
+
+<body>
+  {% block body %}
+  <div class="content">
+    
+    <div class="input-container">
+      <form action="{% url 'ytlink' %}" method="post" >
+        {% csrf_token %}
+        <input type="text" class="yt-inp" name="link"/>
+        <div class="btn-send">
+          <button class="ss" type="submit">Send</button>
+        </div>
+      </form>
+
+      {% if url %}      
+      <div class="info-container">
+        <div class="info">
+          {% for data in url %}
+            <iframe width="470" height="315" src="https://www.youtube.com/embed/{{ data.1 }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>{{ data.0 }}</p>
+            <br>
+            <a href="{{ data.2 }}">Youtube Link</a>
+          {% endfor %}
+        </div>
+
+        <div class="install-btn">
+          <a href="{% url 'HighRes' %}">1080p</a>
+          <a href="{% url 'MiddleRes' %}">720p</a>
+          <a href="{% url 'LowRes' %}">360</a>
+          <a href="{% url 'audio' %}">mp3</a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endblock %}
+</body>

@@ -1,0 +1,24 @@
+.yt-inp {
+  border: 2px solid #660000;
+  color: #ba0021;
+  transition: box-shadow 0.5s ease;
+}
+
+.yt-inp:hover {
+  box-shadow: 0 0 20px 5px rgba(186, 0, 33, 0.5);
+}
+
+.ss {
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #ba0021;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.5s ease;
+}
+
+.ss:hover {
+  background-color: #660000;
+  box-shadow: 0 0 20px 5px rgba(186, 0, 33, 0.5);
+}

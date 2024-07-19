@@ -1,0 +1,24 @@
+.spoti-inp {
+  border: 2px solid #568203;
+  color: #006a4e;
+  transition: box-shadow 0.5s ease;
+}
+
+.spoti-inp:hover {
+  box-shadow: 0 0 20px 5px rgba(0, 106, 78, 0.5);
+}
+
+.ss {
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #568203;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.5s ease;
+}
+
+.ss:hover {
+  background-color: #006a4e;
+  box-shadow: 0 0 20px 5px rgba(0, 106, 78, 0.5);
+}

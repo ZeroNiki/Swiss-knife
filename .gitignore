@@ -1,0 +1,8 @@
+app/__pycache__
+app/app/__pycache__
+app/home/__pycache__
+app/spoti/__pycache__
+app/yand/__pycache__
+app/yt/__pycache__
+app/db.sqlite3
+dump.rdb

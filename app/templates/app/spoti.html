@@ -1,0 +1,21 @@
+{% extends "app/base.html" %} {% load static %}
+
+<head>
+  {% block head %}
+  <link rel="stylesheet" href="{% static 'app/css/spotis.css' %}" />
+  <title>Spotify Downloader</title>
+  {% endblock %}
+</head>
+
+<body>
+  {% block body %}
+  <div class="content">
+    <div class="input-container">
+      <input type="text" class="spoti-inp" />
+      <div class="btn-send">
+        <button class="ss">Send</button>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</body>
