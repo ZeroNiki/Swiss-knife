@@ -11,10 +11,17 @@
   {% block body %}
   <div class="content">
     <div class="input-container">
-      <input type="text" class="spoti-inp" />
-      <div class="btn-send">
-        <button class="ss">Send</button>
-      </div>
+      <form action="{% url 'spotilink' %}" method="post" >
+         {% csrf_token %}
+        <input type="text" class="spoti-inp" name="link" />
+        <div class="btn-send">
+          <button class="ss">Send</button>
+        </div>
+      </form>
+
+      {% if url %}
+        <a href="{% url 'spotiinstall' %}">Install</a>
+      {% endif %}
     </div>
   </div>
   {% endblock %}

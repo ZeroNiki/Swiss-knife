@@ -11,10 +11,18 @@
   {% block body %}
   <div class="content">
     <div class="input-container">
-      <input type="text" class="yand-inp" />
-      <div class="btn-send">
-        <button class="ss">Send</button>
-      </div>
+      <form action="{% url 'yandlink' %}" method="post" >
+        {% csrf_token %}
+        <input type="text" class="yand-inp" name="link"/>
+        <div class="btn-send">
+          <button class="ss">Send</button>
+        </div>
+      </form>
+
+      {% if url %}
+        <a href="{% url 'yandInstall' %}">Install</a>
+      {% endif %}
+       
     </div>
   </div>
   {% endblock %}

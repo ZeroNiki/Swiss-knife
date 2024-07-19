@@ -15,7 +15,6 @@ import re
 r = StrictRedis(decode_responses=False)
 
 
-
 def yt(request):
     data_list = []
     for k in r.keys("*"):
