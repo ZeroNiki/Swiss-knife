@@ -8,10 +8,9 @@ from django.views.decorators.http import require_http_methods
 from .operations.main import main
 from .utils import spoti_url_validation
 
-from redis import StrictRedis
+import redis
 
-# r = redis.Redis(host='localhost', port=6379, db=0, , decode_responses=True)
-r = StrictRedis(decode_responses=False)
+r = redis.Redis(host='redis', port=6379, db=0)
 
 def spoti(request):
     data_list = []

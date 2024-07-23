@@ -15,7 +15,7 @@ SECRET_KEY = SECRET
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'app', 'djangoapp']
 
 
 # Application definition
@@ -71,13 +71,6 @@ DATABASES = {
     }
 }
 
-# Caches
-CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379",
-    }
-}
 
 # Media
 MEDIA_URL = "/media/"

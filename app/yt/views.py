@@ -8,11 +8,9 @@ from .operations.install import dw1080, dw720, dw360, mp3
 from .operations.info import getinfo  
 from .utils import youtube_url_validation
 
-from redis import StrictRedis
-import re
+import redis
 
-# r = redis.Redis(host='localhost', port=6379, db=0, , decode_responses=True)
-r = StrictRedis(decode_responses=False)
+r = redis.Redis(host='redis', port=6379, db=0)
 
 
 def yt(request):

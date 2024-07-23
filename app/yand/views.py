@@ -10,7 +10,7 @@ from .utils import yand_url_validation
 
 import redis 
 
-r = redis.Redis(host='localhost', port=6379, db=0)
+r = redis.Redis(host='redis', port=6379, db=0)
 
 def yand(request):
     data_list = []

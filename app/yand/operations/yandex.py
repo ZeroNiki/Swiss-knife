@@ -14,6 +14,7 @@ firefox_options.set_preference("browser.cache.disk.enable", False)
 firefox_options.set_preference("browser.cache.memory.enable", False)
 firefox_options.set_preference("browser.cache.offline.enable", False)
 firefox_options.set_preference("network.http.use-cache", False)
+firefox_options.binary_location = "/usr/bin/firefox"
 service = Service(f'{DRIVER}')
 driver = webdriver.Firefox(options=firefox_options, service=service)
 
