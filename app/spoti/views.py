@@ -32,7 +32,7 @@ def sptotilink(request):
         url = request.POST.get("link")
         if url:
             if spoti_url_validation(url):
-                r.set(url_cache_name, url, ex=120)
+                r.set(url_cache_name, url, ex=35)
             else:
                 r.set(url_cache_name, "Please, send youtube link", ex=5)
 

@@ -8,10 +8,9 @@ from django.views.decorators.http import require_http_methods
 from .operations.init import main
 from .utils import yand_url_validation
 
-from redis import StrictRedis
+import redis 
 
-# r = redis.Redis(host='localhost', port=6379, db=0, , decode_responses=True)
-r = StrictRedis(decode_responses=False)
+r = redis.Redis(host='localhost', port=6379, db=0)
 
 def yand(request):
     data_list = []
@@ -33,7 +32,7 @@ def yandlink(request):
         url = request.POST.get("link")
         if url:
             if yand_url_validation(url):
-                r.set(url_cache_name, url, ex=120)
+                r.set(url_cache_name, url, ex=35)
             else:
                 r.set(url_cache_name, "Please, send youtube link", ex=5)
 

@@ -10,6 +10,10 @@ from tqdm import tqdm
 
 firefox_options = Options()
 firefox_options.add_argument('--headless')
+firefox_options.set_preference("browser.cache.disk.enable", False)
+firefox_options.set_preference("browser.cache.memory.enable", False)
+firefox_options.set_preference("browser.cache.offline.enable", False)
+firefox_options.set_preference("network.http.use-cache", False)
 service = Service(f'{DRIVER}')
 driver = webdriver.Firefox(options=firefox_options, service=service)
 

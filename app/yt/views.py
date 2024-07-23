@@ -38,7 +38,7 @@ def ytlink(request):
         url = request.POST.get("link")
         if url:
             if youtube_url_validation(url):
-                r.set(url_cache_name, url, ex=60)
+                r.set(url_cache_name, url, ex=35)
             else:
                 r.set(url_cache_name, "Please, send youtube link", ex=5)
 

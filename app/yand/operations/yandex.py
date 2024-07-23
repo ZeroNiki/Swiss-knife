@@ -10,6 +10,10 @@ from .config import DRIVER
 
 firefox_options = Options()
 firefox_options.add_argument('--headless')
+firefox_options.set_preference("browser.cache.disk.enable", False)
+firefox_options.set_preference("browser.cache.memory.enable", False)
+firefox_options.set_preference("browser.cache.offline.enable", False)
+firefox_options.set_preference("network.http.use-cache", False)
 service = Service(f'{DRIVER}')
 driver = webdriver.Firefox(options=firefox_options, service=service)
 
@@ -36,12 +40,12 @@ def get_yandex_track(url):
         pb.update()
 
         #get track name
-        name = driver.find_element(By.XPATH, "/html/body/div[1]/div[16]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div[2]/a")
+        name = driver.find_element(By.XPATH, "/html/body/div[1]/div[16]/div[3]/div/div[3]/div/div[1]/h1/div[1]/span/a")
         trackName = name.text
         pb.update()
 
         #get author 
-        author = driver.find_element(By.XPATH, "/html/body/div[1]/div[16]/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/div[3]/span/a")
+        author = driver.find_element(By.XPATH, "/html/body/div[1]/div[16]/div[3]/div/div[3]/div/div[1]/h1/div[2]/span/a")
         authorName = author.text
         pb.update()
 

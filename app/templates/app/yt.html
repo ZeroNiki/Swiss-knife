@@ -9,8 +9,8 @@
 
 <body>
   {% block body %}
+  <a href="/">Home</a>
   <div class="content">
-    
     <div class="input-container">
       <form action="{% url 'ytlink' %}" method="post" >
         {% csrf_token %}
