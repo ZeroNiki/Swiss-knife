@@ -14,7 +14,7 @@
     <div class="input-container">
       <form action="{% url 'spotilink' %}" method="post" >
          {% csrf_token %}
-        <input type="text" class="spoti-inp" name="link" />
+        <input type="text" class="spoti-inp" name="link"  autocomplete="off" />
         <div class="btn-send">
           <button class="ss">Send</button>
         </div>
