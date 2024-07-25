@@ -67,6 +67,6 @@ def mp3(link):
     with ytd.YoutubeDL(options) as ytdl:
         ytdl.download([link])
         result = ytdl.extract_info("{}".format(link))
-        title = ytdl.prepare_filename(result)[:-5]
+        title = ytdl.prepare_filename(result)[:-4]
 
     return f"{title}.mp3" 

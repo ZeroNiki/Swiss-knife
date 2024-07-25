@@ -34,7 +34,7 @@ def yandlink(request):
             if yand_url_validation(url):
                 r.set(url_cache_name, url, ex=35)
             else:
-                r.set(url_cache_name, "Please, send youtube link", ex=5)
+                r.set(url_cache_name, "Please, send yandex music link", ex=5)
 
     return redirect("/yandDownloads")
 
